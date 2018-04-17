@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.deanadam.main;
+
+import java.io.IOException;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * @author deanadam
+ * @date 2014年10月23日 下午1:56:05
+ */
+public class Main {
+
+	/**
+	 * @author deanadam
+	 * @date 2014年10月23日 下午1:56:05
+	 * @param args
+	 * @return void
+	 * @throws IOException
+	 */
+	public static void main(String[] args) throws IOException {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "applicationProvider.xml" });
+		context.start();
+		System.out.println("按任意键退出");
+		System.in.read();
+	}
+
+}
